@@ -1,0 +1,5 @@
+c:\users\pontus\documents\visual studio 2015\Projects\PixelBotLib\PixelBotLib\bin\Debug\PixelBotLib.dll
+c:\users\pontus\documents\visual studio 2015\Projects\PixelBotLib\PixelBotLib\bin\Debug\PixelBotLib.pdb
+c:\users\pontus\documents\visual studio 2015\Projects\PixelBotLib\PixelBotLib\obj\Debug\PixelBotLib.csprojResolveAssemblyReference.cache
+c:\users\pontus\documents\visual studio 2015\Projects\PixelBotLib\PixelBotLib\obj\Debug\PixelBotLib.dll
+c:\users\pontus\documents\visual studio 2015\Projects\PixelBotLib\PixelBotLib\obj\Debug\PixelBotLib.pdb
