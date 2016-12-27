@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Threading;
 using PixelBotLib.Native;
@@ -27,18 +28,18 @@ namespace PixelBotLib
             PostMessageSafe(wHandle, NativeConstants.WM_KEYUP, new IntPtr(keyCode), new IntPtr(lParam));
         }
 
-        public static void LeftClick(IntPtr wHandle, uint x, uint y, int time)
+        public static void LeftClick(IntPtr wHandle, Point point, int time)
         {
-            PostMessageSafe(wHandle, NativeConstants.WM_LBUTTONDOWN, new IntPtr(0), new IntPtr(Makelparam(x, y)));
+            PostMessageSafe(wHandle, NativeConstants.WM_LBUTTONDOWN, new IntPtr(0), new IntPtr(Makelparam((uint)point.X, (uint)point.Y)));
             Thread.Sleep(time);
-            PostMessageSafe(wHandle, NativeConstants.WM_LBUTTONUP, new IntPtr(0), new IntPtr(Makelparam(x, y)));
+            PostMessageSafe(wHandle, NativeConstants.WM_LBUTTONUP, new IntPtr(0), new IntPtr(Makelparam((uint)point.X, (uint)point.Y)));
         }
 
-        public static void RightClick(IntPtr wHandle, uint x, uint y, int time)
+        public static void RightClick(IntPtr wHandle, Point point, int time)
         {
-            PostMessageSafe(wHandle, NativeConstants.WM_RBUTTONDOWN, new IntPtr(0), new IntPtr(Makelparam(x, y)));
+            PostMessageSafe(wHandle, NativeConstants.WM_RBUTTONDOWN, new IntPtr(0), new IntPtr(Makelparam((uint)point.X, (uint)point.Y)));
             Thread.Sleep(time);
-            PostMessageSafe(wHandle, NativeConstants.WM_RBUTTONUP, new IntPtr(0), new IntPtr(Makelparam(x, y)));
+            PostMessageSafe(wHandle, NativeConstants.WM_RBUTTONUP, new IntPtr(0), new IntPtr(Makelparam((uint)point.X, (uint)point.Y)));
         }
 
         private static uint Makelparam(uint l, uint h)
